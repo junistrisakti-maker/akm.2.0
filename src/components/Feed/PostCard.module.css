@@ -1,0 +1,232 @@
+.cardContainer {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--bg-primary);
+}
+
+.mediaContainer {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.imageMedia {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholderMedia {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.engagementBar {
+    position: absolute;
+    right: 16px;
+    bottom: 120px;
+    /* Adjusted for bottom nav */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    z-index: 10;
+}
+
+.actionButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    transition: transform 0.2s;
+}
+
+.actionButton:active {
+    transform: scale(0.9);
+}
+
+.actionLabel {
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.profilePicContainer {
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.profilePic {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: transform 0.2s;
+}
+
+.profilePic:hover {
+    transform: scale(1.1);
+}
+
+.plusIcon {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    /* transform handled by motion */
+    background: var(--accent-tertiary);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 2px solid var(--bg-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Vinyl animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.vinylRecord {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #222;
+    overflow: hidden;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+.rotating {
+    animation: spin 6s linear infinite;
+}
+
+.vinylRecord img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.infoOverlay {
+    position: absolute;
+    bottom: 90px;
+    /* Above Nav */
+    left: 16px;
+    right: 90px;
+    /* Avoid engagement bar */
+    z-index: 10;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    max-width: 75%;
+}
+
+.username {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.username:hover {
+    text-decoration: underline;
+}
+
+.caption {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #f1f5f9;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.hashtags {
+    font-weight: 600;
+    color: #fff;
+    margin-left: 4px;
+}
+
+.musicTicker {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-top: 4px;
+    backdrop-filter: blur(4px);
+}
+
+.musicText {
+    font-size: 0.85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+/* New Styles for Rating */
+.ratingBadge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-bottom: 4px;
+    font-size: 0.8rem;
+    color: #fbbf24;
+    font-weight: bold;
+}
+
+.reviewCount {
+    color: #cbd5e1;
+    font-weight: normal;
+    font-size: 0.75rem;
+}
+
+.locationTag {
+    color: #fff;
+    font-weight: 600;
+    margin-left: 4px;
+}

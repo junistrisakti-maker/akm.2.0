@@ -1,0 +1,46 @@
+# User files & uploads
+uploads/
+storage/
+admin/uploads/
+
+# Audio & binary executables
+public/audio/
+*.mp3
+*.exe
+
+# Environment and Config
+.env
+api/config.php
+!api/config.sample.php
+
+# Package managers
+node_modules
+vendor
+dist
+dist-ssr
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Schema dump files (auto-generated)
+schema_*.txt
+schema_*.json
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.minimax/
+.gemini/

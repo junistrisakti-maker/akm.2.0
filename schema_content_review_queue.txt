@@ -1,0 +1,9 @@
+TABLE: content_review_queue
+  - id
+  - file_path
+  - mime_type
+  - status
+  - reviewed_by
+  - review_notes
+  - created_at
+  - updated_at

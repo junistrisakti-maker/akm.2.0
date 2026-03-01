@@ -1,0 +1,30 @@
+Table: backsounds
+  id | int | NO
+  name | varchar(255) | NO
+  url | varchar(255) | NO
+  public_id | varchar(100) | NO
+  created_at | datetime | YES
+  is_active | tinyint(1) | YES
+
+Table: posts
+  id | int | NO
+  user_id | int | NO
+  type | enum('video','image') | NO
+  caption | text | YES
+  url | varchar(255) | NO
+  bg_color | varchar(20) | YES
+  audio_name | varchar(100) | YES
+  audio_url | varchar(255) | YES
+  likes | int | YES
+  comments | int | YES
+  shares | int | YES
+  saves | int | YES
+  tags | varchar(255) | YES
+  rating | decimal(3,1) | YES
+  review_count | int | YES
+  location_name | varchar(100) | YES
+  created_at | timestamp | YES
+  status | enum('active','removed','deleted','review_pending') | YES
+  removed_at | timestamp | YES
+  removed_by | int | YES
+

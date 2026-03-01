@@ -1,0 +1,21 @@
+TABLE: users
+  - id
+  - username
+  - email
+  - name
+  - password
+  - role
+  - status
+  - avatar
+  - points
+  - streak
+  - badges
+  - last_login
+  - created_at
+  - favorite_mosque_id
+  - suspension_reason
+  - suspension_end
+  - suspended_by
+  - suspended_at
+  - last_seen
+  - current_activity

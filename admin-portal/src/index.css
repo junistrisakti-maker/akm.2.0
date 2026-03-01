@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* The Slate Enterprise - Deep Industrial Palette */
+  --main-bg: #0f172a;
+  --sidebar-bg: #020617;
+  --card-bg: #1e293b;
+  --accent: #10b981;
+  --border: #334155;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  --error: #f43f5e;
+  --warning: #f59e0b;
+}
+
+/* Force Sharp Edges Everywhere */
+* {
+  border-radius: 0 !important;
+}
+
+body {
+  font-family: 'IBM Plex Sans', -apple-system, sans-serif;
+  background-color: var(--main-bg);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace !important;
+}
+
+/* Bento Grid Card Style */
+.enterprise-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+/* Custom Scrollbar for Industrial Feel */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--main-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Utility for high-density labels */
+.label-industrial {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  display: block;
+}
+
+/* Industrial Input Styling */
+.input-obsidian {
+  width: 100%;
+  background-color: #010409;
+  border: 1px solid var(--border);
+  color: #f8fafc;
+  /* text-primary visibility */
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  font-family: 'IBM Plex Mono', monospace;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-obsidian:focus {
+  border-color: rgba(16, 185, 129, 0.5);
+  background-color: #021125;
+}
+
+.input-obsidian::placeholder {
+  color: #334155;
+}

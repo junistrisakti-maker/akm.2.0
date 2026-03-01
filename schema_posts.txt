@@ -1,0 +1,22 @@
+TABLE: posts
+  - id
+  - user_id
+  - type
+  - caption
+  - url
+  - bg_color
+  - audio_name
+  - audio_url
+  - backsound_id
+  - likes
+  - comments
+  - shares
+  - saves
+  - tags
+  - rating
+  - review_count
+  - location_name
+  - created_at
+  - status
+  - removed_at
+  - removed_by

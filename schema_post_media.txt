@@ -1,0 +1,10 @@
+TABLE: post_media
+  - id
+  - post_id
+  - media_url
+  - media_type
+  - file_size
+  - original_name
+  - sort_order
+  - created_at
+  - status

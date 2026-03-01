@@ -1,0 +1,7 @@
+<?php
+require_once __DIR__ . '/../../api/config.php';
+$stmt = $pdo->query("SHOW TABLES");
+$tables = $stmt->fetchAll(PDO::FETCH_COLUMN);
+foreach ($tables as $t)
+    echo "$t\n";
+?>
