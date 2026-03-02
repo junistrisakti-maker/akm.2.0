@@ -1,7 +1,0 @@
-Array
-(
-    [cloudinary_api_key] => 421113724747939
-    [cloudinary_api_secret] => MO58iMsxfaNV-jm751yM4Nyk5GI
-    [cloudinary_cloud_name] => AKM.2.0
-    [cloudinary_folder] => akm_backsound
-)

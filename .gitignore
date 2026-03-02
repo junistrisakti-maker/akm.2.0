@@ -28,9 +28,13 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Schema dump files (auto-generated)
+# Schema & settings dump files (auto-generated, may contain secrets)
 schema_*.txt
 schema_*.json
+API-untuk*.txt
+*_dump.txt
+*_dump.json
+*.txt
 
 # Editor directories and files
 .vscode/*
