@@ -8,12 +8,28 @@ require_once 'config.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
 
+// Auth helper: verify admin/superadmin from header or body
+function verifyAdmin($pdo, $user_id) {
+    if (!$user_id) return false;
+    $stmt = $pdo->prepare("SELECT role FROM users WHERE id = ?");
+    $stmt->execute([$user_id]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $user && in_array($user['role'], ['admin', 'superadmin']);
+}
+
 if ($method === 'GET') {
+    // Require admin ID via header (sent by admin-portal)
+    $admin_id = (int)($_SERVER['HTTP_X_ADMIN_ID'] ?? 0);
+    if (!verifyAdmin($pdo, $admin_id)) {
+        http_response_code(401);
+        echo json_encode(['error' => 'Unauthorized']);
+        exit();
+    }
+
     try {
         $stmt = $pdo->query("SELECT * FROM system_settings ORDER BY setting_group, setting_key");
         $settings = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        // Group by group
         $grouped = [];
         foreach ($settings as $s) {
             $grouped[$s['setting_group']][] = $s;
